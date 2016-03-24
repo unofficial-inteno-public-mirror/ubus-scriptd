@@ -161,11 +161,11 @@ int main(int argc, char **argv){
 	static struct app app; 
 	
 	// first thing is to fork off all services
-	if(app_load_services(&app, UBUS_SERVICE_ROOT) != 0){
-		fprintf(stderr, "***** ERROR ***** there were errors while loading lua services!\n"); 
+	//if(app_load_services(&app, UBUS_SERVICE_ROOT) != 0){
+	//	fprintf(stderr, "***** ERROR ***** there were errors while loading lua services!\n"); 
 		//app_destroy(&app); 
 		//return -1; 
-	}
+	//}
 
 	app_init(&app); 
 	if(app_connect_to_ubus(&app, NULL) != 0){
